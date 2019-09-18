@@ -6,4 +6,4 @@ from django.http import HttpResponse
 
 #funcao de view
 def index(request):
-    return HttpResponse("Bem-vindo!")
+    return render(request,'index.html')
