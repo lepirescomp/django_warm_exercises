@@ -7,3 +7,6 @@ from django.http import HttpResponse
 #funcao de view
 def index(request):
     return render(request,'index.html')
+
+def exibir(request,perfil_id):
+    return render(request,"perfil.html")
