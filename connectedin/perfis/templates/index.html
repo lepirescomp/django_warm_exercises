@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<meta charset="UTF-8">
-<title> Document </title>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Django warm up </title>
 </head>
+
 <body>
 
-<h1>My First Heading</h1>
+    <h1> Perfis cadastrados</h1>
 
-<p>My first paragraph.</p>
+    <ul>
+        {% if perfis%} {% for perfil in perfis%}
+        <li>
+            <a href="{% url 'exibir' perfil.id %}" <font size="6">Nome: {{perfil.nome}}, E-mail: {{perfil.email}}, Empresa: {{perfil.nome_empresa}}</font>
+        </li>
+        {% endfor %} {% else %}
+        <p>Nenhum perfil encontrado</p>
+        {% endif %}
+
+    </ul>
 
 </body>
+
 </html>
